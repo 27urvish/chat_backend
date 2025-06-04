@@ -103,9 +103,9 @@ const server = http.createServer(app)
 
 // ✅ CORS for frontend (adjust origin as needed)
 const corsOptions = {
-  origin: "http://localhost:3000",
-  credentials: true,
-}
+  origin: "*",
+  credentials: true, // NOTE: this will not work with origin: "*"
+};
 app.use(cors(corsOptions))
 app.use(express.json())
 
