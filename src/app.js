@@ -103,9 +103,9 @@ const server = http.createServer(app)
 
 // ✅ CORS for frontend (adjust origin as needed)
 const corsOptions = {
-  origin: "*",
-  credentials: true, // NOTE: this will not work with origin: "*"
-};
+  origin: ["http://localhost:3000" , "https://chat-frontend-indol-three.vercel.app/"],
+  credentials: true,
+}
 app.use(cors(corsOptions))
 app.use(express.json())
 
