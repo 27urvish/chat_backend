@@ -6,6 +6,7 @@ const protect = require('../middleware/middleware');
 const getUserById = require('../controller/chat/chatController');
 const Message = require('../models/chat')
 
+
 const router = express.Router();
 
 router.post('/login' , loginUser )
